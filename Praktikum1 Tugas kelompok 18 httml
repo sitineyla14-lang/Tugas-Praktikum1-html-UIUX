@@ -1,1 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 1: Kelompok 18</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header & Footer */
+        header, footer {
+            background-color: #cccccc;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex: 1;
+        }
+
+        /* Judul Kelompok */
+        .group-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .group-title h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .group-title p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Bagian Intro */
+        .intro-section {
+            background-color: #e9ecef;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .intro-badge {
+            background: #999;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+
+        /* Grid Anggota (Otomatis membungkus ke baris baru) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card Anggota */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            gap: 15px;
+            background-color: #fff;
+        }
+
+        /* Wadah/Bingkai Foto */
+        .photo-container {
+            width: 120px;
+            height: 140px;
+            background-color: #e0e0e0;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        /* Pengaturan Gambar Foto */
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Agar foto terpotong rapi memenuhi bingkai tan#3D405Epa distorsi */
+        }
+
+        /* Detail Anggota */
+        .member-details {
+            flex-grow: 1;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .member-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .member-header h3 {
+            font-size: 15px;
+            color: #111;
+        }
+
+        .role-badge {
+            background-color: #ddd;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            color: #555;
+        }
+
+        .bio-item {
+            margin-bottom: 4px;
+            color: #555;
+        }
+        
+        .bio-label {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Header</header>
+
+    <div class="container">
+        <!-- Bagian Judul -->
+        <div class="group-title">
+            <h1>Kelompok 18</h1>
+            <p>Desain UI/UX & Pemrograman Web</p>
+            <p>STT-NF Nurul Fikri</p>
+        </div>
+
+        <!-- Bagian Intro -->
+        <div class="intro-section">
+            <div class="intro-badge"></div>
+            <span>Intro</span>
+        </div>
+
+        <!-- Grid Anggota -->
+        <div class="grid-container">
+            
+            <!-- Anggota 1 -->
+            <div class="card">
+                <div class="photo-container">
+                    <!-- GANTI 'siti.jpg' DENGAN NAMA FILE FOTO ASLI -->
+                    <img src="/assets/img/20260914_120021.jpg" alt="Foto Siti Naelatul Yasroh">
+                </div>
+                <div class="member-details">
+                    <div class="member-header">
+                        <h3>Siti Naelatul Yasroh</h3>
+                        <span class="role-badge">Anggota</span>
+                    </div>
+                    <div class="bio-item"><span class="bio-label">NIM:</span> 0110226109</div>
+                    <div class="bio-item"><span class="bio-label">Prodi:</span> Teknik Informatika</div>
+                    <div class="bio-item"><span class="bio-label">TTL:</span> Bogor, 31 Januari 2007</div>
+                    <div class="bio-item"><span class="bio-label">Hobi:</span> -</div>
+                </div>
+            </div>
+
+            <!-- Anggota 2 -->
+            <div class="card">
+                <div class="photo-container">
+                    <!-- GANTI 'sabrina.jpg' DENGAN NAMA FILE FOTO ASLI -->
+                    <img src="/assets/IMG-20261007-WA0011.jpg" alt="Foto Sabrina Nova Azahra">
+                </div>
+                <div class="member-details">
+                    <div class="member-header">
+                        <h3>Sabrina Nova Azahra</h3>
+                        <span class="role-badge">Anggota</span>
+                    </div>
+                    <div class="bio-item"><span class="bio-label">NIM:</span> 0110226101</div>
+                    <div class="bio-item"><span class="bio-label">Prodi:</span> Teknik Informatika</div>
+                    <div class="bio-item"><span class="bio-label">TTL:</span> Bekasi, 19 November 2007</div>
+                    <div class="bio-item"><span class="bio-label">Hobi:</span> Main di lumpur</div>
+                </div>
+            </div>
+
+            <!-- Anggota 3 -->
+            <div class="card">
+                <div class="photo-container">
+                    <!-- GANTI 'seftia.jpg' DENGAN NAMA FILE FOTO ASLI -->
+                    <img src="/assets/IMG-20261007-WA0021.jpg" alt="Foto Seftia Aziza Eliana">
+                </div>
+                <div class="member-details">
+                    <div class="member-header">
+                        <h3>Seftia Aziza Eliana</h3>
+                        <span class="role-badge">Anggota</span>
+                    </div>
+                    <div class="bio-item"><span class="bio-label">NIM:</span> 0110226087</div>
+                    <div class="bio-item"><span class="bio-label">Prodi:</span> Teknik Informatika</div>
+                    <div class="bio-item"><span class="bio-label">TTL:</span> Depok, 13 Juni 2007</div>
+                    <div class="bio-item"><span class="bio-label">Hobi:</span> Olahraga</div>
+                </div>
+            </div>
+
+            <!-- Anggota 4 -->
+            <div class="card">
+                <div class="photo-container">
+                    <!-- GANTI 'rizqullah.jpg' DENGAN NAMA FILE FOTO ASLI -->
+                    <img src="/assets/IMG-20261007-WA0022.jpg" alt="Foto Rizqullah Izzatul Ibad">
+                </div>
+                <div class="member-details">
+                    <div class="member-header">
+                        <h3>Rizqullah Izzatul Ibad</h3>
+                        <span class="role-badge">Anggota</span>
+                    </div>
+                    <div class="bio-item"><span class="bio-label">NIM:</span> 0110226006</div>
+                    <div class="bio-item"><span class="bio-label">Prodi:</span> Teknik Informatika</div>
+                    <div class="bio-item"><span class="bio-label">TTL:</span> Tangerang, 11 Januari 2007</div>
+                    <div class="bio-item"><span class="bio-label">Hobi:</span> Membaca</div>
+                </div>
+            </div>
+
+            <!-- Anggota 5 -->
+            <div class="card">
+                <div class="photo-container">
+                    <!-- GANTI 'riefky.jpg' DENGAN NAMA FILE FOTO ASLI -->
+                    <img src="/assets/IMG-20261007-WA0025.jpg" alt="Foto Riefky Gus Maula">
+                </div>
+                <div class="member-details">
+                    <div class="member-header">
+                        <h3>Riefky Gus Maula</h3>
+                        <span class="role-badge">Anggota</span>
+                    </div>
+                    <div class="bio-item"><span class="bio-label">NIM:</span> 0110226016</div>
+                    <div class="bio-item"><span class="bio-label">Prodi:</span> Teknik Informatika</div>
+                    <div class="bio-item"><span class="bio-label">TTL:</span> Depok, 13 Maret 2008</div>
+                    <div class="bio-item"><span class="bio-label">Hobi:</span> Bermain Bebek</div>
+                    </div>
+  </div>
+</div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>Footer</footer>
+
+</body>
